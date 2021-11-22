@@ -3,18 +3,11 @@ import SearchBar from './components/search-bar';
 import ExploreCategories from './components/explore-categories';
 import Restaurants from './components/restaurants';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
 import './App.css';
 
 function App() {
   return (
-    <Router>
+    // <Router>
     <div className="Ap">
       <Nav/>
       <SearchBar/>
@@ -36,7 +29,7 @@ function App() {
         </a>
       </header> */}
     </div>
-    </Router>
+    
   );
 }
 
