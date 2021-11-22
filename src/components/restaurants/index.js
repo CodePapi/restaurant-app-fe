@@ -57,14 +57,14 @@ const Restaurants = () => {
         ) : (
           <section className="row">
             {restaurantsData.length < 1 ? (
-              <h1 className="pl-5 ml-5 container">
+              <h1 className=" container">
                 No Restaurants matches this querry
               </h1>
             ) : (
               <>
                 {restaurantsData.map((restaurant, index) => (
                   <div
-                    key={index}
+                    key={Math.random()}
                     className={"col-md-3 col-xl-6 " + Style.rescont}
                   >
                     <div className={Style.restaurant}></div>
