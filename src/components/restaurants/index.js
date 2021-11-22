@@ -2,7 +2,7 @@ import Style from "../../components/restaurants/index.module.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { Spin, Alert, message } from "antd";
+import { Spin, Alert, message, Button } from "antd";
 import {
   get_Restaurants_,
   get_Restaurants_Cleanup,
@@ -64,16 +64,24 @@ const Restaurants = () => {
               <>
                 {restaurantsData.map((restaurant, index) => (
                   <div
-                    key={Math.random()}
+                    key={index}
                     className={"col-md-3 col-xl-6 " + Style.rescont}
                   >
+                    
                     <div className={Style.restaurant}></div>
+                    <div style={{display:"flex", justifyContent:"space-between"}}>
+                    <div>
                     <h4 className={Style.name}>{restaurant.Name}</h4>
                     <h5 className={Style.desc}>
                       <b>location:</b>
                       {restaurant.location} - <b>cuisine</b>:{" "}
                       {restaurant.cuisine}
                     </h5>
+                    </div>
+                    <div className={Style.bookdiv}>
+                    <Button className={Style.bookbutton}>Book</Button>
+                    </div>
+                    </div>
                   </div>
                 ))}
               </>
