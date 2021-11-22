@@ -1,0 +1,88 @@
+.title {
+  /* width: 235px; */
+  height: 21px;
+  /* left: 603px;
+top: 194px; */
+  text-align: center;
+  /* font-family: 'Inter'; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 21px;
+  /* identical to box height, or 87% */
+
+  /* Gray 1 */
+
+  color: #333333;
+
+  margin: auto;
+  width: 60%;
+  padding: 40px;
+}
+
+.containr {
+  padding-top: 50px;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.cus {
+  /* width: 84px; */
+  text-align: center;
+}
+.cuisineparent {
+  /* width: 84px; */
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 20px;
+    width: 300px;
+  }
+
+  .cus > h5 {
+    font-size: 10px;
+  }
+  .cuisineparent {
+    flex-wrap: nowrap;
+    max-width: 90vw;
+    overflow-x: scroll;
+  }
+  .cuisine {
+    width: 44px;
+    height: 44px;
+    top: 255px;
+    margin: 10px;
+    /* Gray 6 */
+
+    background: #f2f2f2;
+    border-radius: 8px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .cuisine {
+    width: 84px;
+    height: 84px;
+    top: 255px;
+    margin: 10px;
+    /* Gray 6 */
+
+    background: #f2f2f2;
+    border-radius: 8px;
+  }
+}
