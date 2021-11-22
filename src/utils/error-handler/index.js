@@ -1,9 +1,9 @@
 const ErrorHandler = e => {
   let errorResponse;
   try {
-    if (e.response.data == undefined) errorResponse = 'Something went wrong';
+    if (e.response.data === undefined) errorResponse = 'Something went wrong';
     
-    if(e.response.status == 500){
+    if(e.response.status ===500){
       errorResponse = 'Something went wrong';
     }else if(e.response.data.errors){
       const { errors } = e.response.data;
