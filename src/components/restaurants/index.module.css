@@ -55,6 +55,10 @@ font-size: 14px;
 
 color: #828282;
 }
+.float{
+    height: 60vh;
+    overflow: auto;
+}
 @media only screen and (max-width: 900px) {
     .name{
         font-size: 11px;
