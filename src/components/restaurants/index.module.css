@@ -11,8 +11,8 @@ border-radius: 6px;
 }
 
 .rescont{
-height: 150px;
-margin-bottom: 100px;
+height: 250px;
+margin-bottom: 40px;
 }
 .title{
 /* height: 21px; */
@@ -62,6 +62,20 @@ color: #828282;
 .float{
     height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden
+}
+
+.bookdiv{
+    margin-top: 10px;
+}
+.bookbutton{
+    /* Rectangle 32 */
+width: 69px;
+height: 35px;
+background: #FF0000;
+font-size: 16px;
+color: #FFFFFF;
+border-radius: 6px;
 }
 @media only screen and (max-width: 900px) {
     .name{
@@ -75,7 +89,7 @@ color: #828282;
     }
     .rescont{
         /* margin-bottom: 30px; */
-        margin-bottom: 100px;
+        margin-bottom: 30px;
 
     }
     .restaurant{
