@@ -10,7 +10,7 @@ if(SERVER_HOST){
 }
 
 const AxiosCall = async requestObj => {
-  const { path, method, data, contentType,  version = 'v1' } = requestObj;
+  const { path, method, data, contentType } = requestObj;
   const token = localStorage.getItem('authToken');
  
   let headers = { 
