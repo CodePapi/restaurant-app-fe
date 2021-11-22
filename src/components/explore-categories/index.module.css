@@ -1,3 +1,13 @@
+.cuisine {
+    width: 84px;
+    height: 84px;
+    top: 255px;
+    margin: 10px;
+    /* Gray 6 */
+
+    background: #f2f2f2;
+    border-radius: 8px;
+  }
 .title {
   /* width: 235px; */
   height: 21px;
@@ -17,7 +27,7 @@ top: 194px; */
 
   margin: auto;
   width: 60%;
-  padding: 40px;
+  /* padding: 40px; */
 }
 
 .containr {
@@ -70,19 +80,15 @@ top: 194px; */
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
+    .cuisineparent {
+        flex-wrap: nowrap;
+        max-width: 90vw;
+        overflow-x: scroll;
+      }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .cuisine {
-    width: 84px;
-    height: 84px;
-    top: 255px;
-    margin: 10px;
-    /* Gray 6 */
 
-    background: #f2f2f2;
-    border-radius: 8px;
-  }
 }

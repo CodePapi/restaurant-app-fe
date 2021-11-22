@@ -1,0 +1,77 @@
+.restaurant{
+width: 90%;
+height: 180px;
+/* left: 80px;
+top: 577px; */
+/* margin: 10px; */
+/* Gray 2 */
+/* margin: 3px; */
+background: #E0E0E0;
+border-radius: 6px;
+}
+
+.title{
+/* height: 21px; */
+
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+/* line-height: 21px; */
+padding-top: 50px;
+padding-bottom: 30px;
+/* identical to box height, or 87% */
+
+
+/* Gray 1 */
+
+color: #333333;
+}
+
+.containr{
+    padding-bottom: 150px;
+}
+.name{
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 21px;
+padding-top: 10px;
+/* identical to box height, or 131% */
+
+
+/* Gray 1 */
+
+color: #333333;
+}
+
+.desc{
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+/* identical to box height, or 150% */
+
+
+/* Gray 3 */
+
+color: #828282;
+}
+@media only screen and (max-width: 900px) {
+    .name{
+        font-size: 11px;
+    }
+    .desc{
+        font-size: 10px;
+    }
+    .title{
+        font-size: 13px;
+    }
+    .rescont{
+        margin-bottom: 30px;
+    }
+    .restaurant{
+        width: 100%;
+        /* margin-bottom: 30px; */
+        padding-top: 20px;
+
+}
+}

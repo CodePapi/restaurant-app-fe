@@ -1,6 +1,8 @@
 import Nav from './components/nav';
 import SearchBar from './components/search-bar';
 import ExploreCategories from './components/explore-categories';
+import Restaurants from './components/restaurants';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,6 +19,7 @@ function App() {
       <Nav/>
       <SearchBar/>
       <ExploreCategories/>
+      <Restaurants/>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

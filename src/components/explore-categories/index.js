@@ -15,12 +15,12 @@ const cuisnes = [
 
 const ExploreCategories = () => {
   return (
-    <section className={Style.containr}>
+    <section className={Style.containr + " container"}>
       <h1 className={Style.title}>Explore by category</h1>
       <div className={Style.allcusines}>
         <div className={Style.cuisineparent}>
           {cuisnes.map((cuisne, index) => (
-            <Link to="/" className={Style.cus} key={index}>
+            <Link to={"/" + cuisne} className={Style.cus} key={index}>
               <div className={Style.cuisine}></div>
               <h5>{cuisne}</h5>
             </Link>
