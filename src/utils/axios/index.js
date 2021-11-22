@@ -5,7 +5,8 @@ let baseURL;
 if(SERVER_HOST){
   baseURL = `${SERVER_HOST}/api/`;
 }else{
-  const host='http://restaurant-env.eba-ami6wnm7.us-east-2.elasticbeanstalk.com';
+  // const host='http://restaurant-env.eba-ami6wnm7.us-east-2.elasticbeanstalk.com';
+  const host ="https://foodierestaurantapp.emed9ja.ml"
   baseURL = `${host}/api/`;
 }
 
