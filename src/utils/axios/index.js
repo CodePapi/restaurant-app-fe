@@ -26,8 +26,8 @@ const AxiosCall = async requestObj => {
     return result;
   } catch (error) {
     if(error.response.status === 401){
-      localStorage.setItem('authToken', '');
-      window.location.href = '/login';
+      // localStorage.setItem('authToken', '');
+      // window.location.href = '/login';
     }
     throw error;
   }
