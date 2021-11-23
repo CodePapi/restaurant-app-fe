@@ -7,13 +7,14 @@ import { message } from "antd";
 
 const BookingModal = ({ children, data }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [user, setUser] = useState(null);
   const profileState = useSelector((p) => p.getProfile);
   const bookState = useSelector((b) => b.book);
   const dispatch = useDispatch();
   const showModal = () => {
     setIsModalVisible(true);
   };
-
+  const token = localStorage.getItem("authToken");
   const handleOk = () => {
     setIsModalVisible(false);
   };
@@ -32,13 +33,16 @@ const BookingModal = ({ children, data }) => {
     id: data.id,
   };
   const BookFun = () => {
-    dispatch(book({ bookedBy: bookedBy, restaurantData: restaurantData }));
+    console.log(token);
+    if (token === null || token === undefined) {
+      message.error("only logged in users areauthorized to make booking");
+    } else
+      dispatch(book({ bookedBy: bookedBy, restaurantData: restaurantData }));
   };
 
   useEffect(() => {
     if (bookState.isSuccessful) {
       setIsModalVisible(false);
-      message.success("restaurant booked successfully");
       dispatch(bookCleanup());
     } else if (bookState.error) {
       dispatch(bookCleanup());
