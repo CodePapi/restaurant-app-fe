@@ -5,6 +5,8 @@ import getRestaurants from './get-restaurants';
 import getCuisines from './get-cuisines';
 import getLocations from './get-locations';
 import getProfile from './get-profile';
+import book from './book-restaurant';
+import getBookings from './get-booking';
 
 const rootReducer = combineReducers({
   login,
@@ -12,7 +14,9 @@ const rootReducer = combineReducers({
   getRestaurants,
   getCuisines,
   getLocations,
-  getProfile
+  getProfile,
+  book,
+  getBookings
 });
 
 export default rootReducer;

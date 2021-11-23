@@ -21,21 +21,13 @@ const SearchBar = () => {
 
 
   const handleChange = (e) => {
-      console.log(e.target.value)
     setCuisineValue(e.target.value);
   };
 
-  const handleKeypress = (e) => {
-    if (e.keyCode === 13) {
-      console.log(e.target.value);
-      console.log(window.location.pathname);
-    }
-  };
   let query = { location: null, cuisine:null };
   const FilterLocation = (loc) => {
     navigate("/" + loc);
       if(cuisine.trim().length>0){
-          console.log(cuisine.length)
         navigate(`/${loc}/${cuisine}` );
         query.cuisine = cuisine;  
       }
@@ -64,7 +56,6 @@ const SearchBar = () => {
             <input
               value={cuisine}
               onChange={handleChange}
-              onKeyUp={handleKeypress}
               className={Style.searchbox}
               placeholder="Search Cuisine"
             />
