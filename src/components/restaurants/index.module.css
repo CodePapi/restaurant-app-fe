@@ -36,11 +36,11 @@
   font-size: 12px;
   color: #828282;
 }
-.float {
+/* .float {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
-}
+} */
 
 .bookdiv {
   margin-top: 10px;
