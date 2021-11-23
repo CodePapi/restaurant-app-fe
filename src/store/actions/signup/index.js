@@ -29,7 +29,6 @@ export const signUp = (payload) => async (dispatch) => {
       data: payload,
     };
     const res = await AxiosCall(requestObj);
-    console.log(res);
     dispatch(signUpSuccess(res));
   } catch (err) {
     const error = ErrorHandler(err);

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { Spin, Alert, message, Button } from "antd";
 import { Pagination } from "antd";
+import BookingModal from "../boking-modal";
 import {
   get_Restaurants_,
   get_Restaurants_Cleanup,
@@ -33,12 +34,10 @@ const Restaurants = () => {
   useEffect(() => {
     query.location = location;
     query.cuisine = cuisine;
-    console.log("pathnane", window.location.pathname);
     dispatch(get_Restaurants_(query));
   }, []);
 
   const handleChange = (page) => {
-    console.log(page);
     setConfig({
       data: restaurantsData,
       totalPage: restaurantsData.length,
@@ -59,7 +58,6 @@ const Restaurants = () => {
         minIndex: 0,
         maxIndex: pageSize,
       });
-      console.log(getRestaurantState.data);
       dispatch(get_Restaurants_Cleanup());
     } else if (getRestaurantState.error) {
       message.error("problem getting restaurants");
@@ -74,7 +72,7 @@ const Restaurants = () => {
           <Spin tip="Loading Restaurants...">
             <Alert
               style={{ height: "60vh" }}
-              //   type="info"
+            //   type="info"
             />
           </Spin>
         ) : (
@@ -106,9 +104,11 @@ const Restaurants = () => {
                               {restaurant.cuisine}
                             </h5>
                           </div>
-                          <div className={Style.bookdiv}>
-                            <Button className={Style.bookbutton}>Book</Button>
-                          </div>
+                          <BookingModal data={restaurant}>
+                            <div className={Style.bookdiv}>
+                              <Button className={Style.bookbutton}>Book</Button>
+                            </div>
+                          </BookingModal>
                         </div>
                       </div>
                     )

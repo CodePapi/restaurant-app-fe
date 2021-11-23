@@ -52,7 +52,12 @@ const Nav = () => {
                   <Bookings />
                 </div>
                 <Menu>
-                  <a id="contact" onClick={(e)=>e.preventDefault()} className="menu-item" href="">
+                  <a
+                    id="contact"
+                    onClick={(e) => e.preventDefault()}
+                    className="menu-item"
+                    href=""
+                  >
                     Welcome {userData?.username}{" "}
                   </a>
                   <a onClick={Logout} className="menu-item--small pl-5" href="">

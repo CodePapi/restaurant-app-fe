@@ -39,3 +39,17 @@ export const getProfile = {
   data: null,
   error: null
 };
+
+export const book = {
+  isLoading: false,
+  isSuccessful: false,
+  data: null,
+  error: null
+};
+
+export const getBookings = {
+  isLoading: false,
+  isSuccessful: false,
+  data: null,
+  error: null
+};
