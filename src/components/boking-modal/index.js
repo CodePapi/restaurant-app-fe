@@ -4,10 +4,10 @@ import { book, bookCleanup } from "../../store/actions/book-restaurant/index";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { message } from "antd";
+import { getBookings } from "../../store/actions/get-bookings/index";
 
 const BookingModal = ({ children, data }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [user, setUser] = useState(null);
   const profileState = useSelector((p) => p.getProfile);
   const bookState = useSelector((b) => b.book);
   const dispatch = useDispatch();
@@ -42,6 +42,7 @@ const BookingModal = ({ children, data }) => {
 
   useEffect(() => {
     if (bookState.isSuccessful) {
+      dispatch(getBookings())
       setIsModalVisible(false);
       dispatch(bookCleanup());
     } else if (bookState.error) {
