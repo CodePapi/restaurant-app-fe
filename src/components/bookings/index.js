@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Drawer, Button } from "antd";
 import { useSelector, useDispatch } from "react-redux";
+import {AccountBookOutlined} from "@ant-design/icons"
 import {
   getBookingsCleanup,
   getBookings,
@@ -36,8 +37,9 @@ const Bookings = () => {
 
   return (
     <>
-      <Button type="link" onClick={showDrawer}>
-        My Bookings
+      <Button type="link" color="red" onClick={showDrawer}>
+        {/* My Bookings */}
+        <AccountBookOutlined style={{color:"red"}} />
       </Button>
       <Drawer
         title="All My Bookings"

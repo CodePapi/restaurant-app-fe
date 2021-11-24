@@ -43,14 +43,16 @@ const Nav = () => {
         <div className={Style.navflex}>
           <div className={Style.logo}>
             <img src={logo} alt="logo" />
+            {/* {userData !== null ?  <div className="hidein mb-3">
+                  <Bookings />
+                </div>:null} */}
           </div>
-
+  {userData !== null ?  <div className="hidein ">
+                  <Bookings />
+                </div>:null}
           <div className={Style.buttoncontainer}>
             {userData !== null ? (
               <>
-                <div className="hidein">
-                  <Bookings />
-                </div>
                 <Menu>
                   <a
                     id="contact"
@@ -60,11 +62,11 @@ const Nav = () => {
                   >
                     Welcome {userData?.username}{" "}
                   </a>
-                  <a onClick={Logout} className="menu-item--small pl-5" href="">
+                  <a onClick={Logout} className="menu-item--small" href="">
                     Logout
                   </a>
                 </Menu>
-                <div style={{ width: "280px" }}></div>{" "}
+                <div style={{ width: "200px" }}></div>{" "}
                 <div className="hider">
                   {" "}
                   Welcome {userData?.username} | <Bookings /> |

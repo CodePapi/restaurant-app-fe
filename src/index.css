@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
 }
 
 code {
@@ -24,17 +25,17 @@ code {
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute;
-  width: 36px;
+  width: 30px;
   height: 30px;
-  right: 36px;
-  top: 20px;
+  right: 5px;
+  top: 10px;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: red;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 10px;
 
 }
 
