@@ -76,6 +76,7 @@ const Restaurants = () => {
             />
           </Spin>
         ) : (
+          <>
           <section className="row">
             {restaurantsData.length < 1 ? (
               <h1 className=" container">No Restaurants matches this querry</h1>
@@ -115,14 +116,16 @@ const Restaurants = () => {
                 )}
               </>
             )}
-            <Pagination
+           
+          </section>
+          <Pagination
               pageSize={pageSize}
               current={current}
               total={data.length}
               onChange={handleChange}
               style={{ bottom: "0px" }}
             />
-          </section>
+          </>
         )}
       </div>
     </div>

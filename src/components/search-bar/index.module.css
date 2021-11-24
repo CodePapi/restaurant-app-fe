@@ -44,13 +44,17 @@
     
   .searchblock {
     /* width: 560px; */
-
+  
     max-width: 300px;
   }
+  .in{
+    display: flex;
+    justify-content: space-between;
+  }
   .searchbox {
-    max-width: 150px;
+    max-width: 100px;
     padding-left: 0px;
-  padding-right: 30px;
+  padding-right: 10px;
   }
 }
 

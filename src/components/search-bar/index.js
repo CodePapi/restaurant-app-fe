@@ -51,7 +51,7 @@ const SearchBar = () => {
     <section className={Style.full}>
       <div className={Style.searchblock}>
         <div className={Style.search}>
-          <Input.Group compact>
+          <Input.Group className={Style.in} compact>
             <SearchOutlined style={{ fontSize: "25px", color: "#BDBDBD" }} />
             <input
               value={cuisine}
