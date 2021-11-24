@@ -5,7 +5,7 @@ import Restaurants from '../../components/restaurants';
 
 function App() {
   return (
-    <div className="Ap">
+    <div>
       <Nav/>
       <SearchBar/>
       <ExploreCategories/>
