@@ -64,7 +64,7 @@ const SearchBar = () => {
             disabled={cuisine.trim().length>0&&cuisineState?.data.includes(cuisine)===false}
               onChange={(e) => FilterLocation(e)}
               defaultValue="location"
-              style={{ border: "none", maxWidth:"150px"}}
+              style={{ border: "none",outline:"none", width:"150px"}}
             >
               {locationsState?.data?.map((location, index) => (
                 <Option key={index} value={location}>
