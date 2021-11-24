@@ -81,7 +81,7 @@ const Nav = () => {
                   className={Style.signinbutton}
                 >
                   {" "}
-                  Sign in
+                  Sign Up
                 </Button>
                 <Button onClick={() => navigate("/login")} type="link">
                   Login
