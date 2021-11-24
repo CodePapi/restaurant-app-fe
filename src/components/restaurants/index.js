@@ -71,54 +71,56 @@ const Restaurants = () => {
         {getRestaurantState.isLoading ? (
           <Spin tip="Loading Restaurants...">
             <Alert
-              style={{ height: "60vh" }}
-            //   type="info"
+              style={{ height: "60vh", background: "white", border: "none" }}
             />
           </Spin>
         ) : (
           <>
-          <section className="row">
-            {restaurantsData.length < 1 ? (
-              <h1 className=" container">No Restaurants matches this querry</h1>
-            ) : (
-              <>
-                {data.map(
-                  (restaurant, index) =>
-                    index >= minIndex &&
-                    index < maxIndex && (
-                      <div
-                        key={index}
-                        className={"col-md-3 col-xl-6 " + Style.rescont}
-                      >
-                        <div className={Style.restaurant}></div>
+            <section className="row">
+              {restaurantsData.length < 1 ? (
+                <h1 className=" container">
+                  No Restaurants matches this querry
+                </h1>
+              ) : (
+                <>
+                  {data.map(
+                    (restaurant, index) =>
+                      index >= minIndex &&
+                      index < maxIndex && (
                         <div
-                          style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                          }}
+                          key={index}
+                          className={"col-md-3 col-xl-6 " + Style.rescont}
                         >
-                          <div>
-                            <h4 className={Style.name}>{restaurant.Name}</h4>
-                            <h5 className={Style.desc}>
-                              <b>location:</b>
-                              {restaurant.location} - <b>cuisine</b>:{" "}
-                              {restaurant.cuisine}
-                            </h5>
-                          </div>
-                          <BookingModal data={restaurant}>
-                            <div className={Style.bookdiv}>
-                              <Button className={Style.bookbutton}>Book</Button>
+                          <div className={Style.restaurant}></div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                            }}
+                          >
+                            <div>
+                              <h4 className={Style.name}>{restaurant.Name}</h4>
+                              <h5 className={Style.desc}>
+                                <b>location:</b>
+                                {restaurant.location} - <b>cuisine</b>:{" "}
+                                {restaurant.cuisine}
+                              </h5>
                             </div>
-                          </BookingModal>
+                            <BookingModal data={restaurant}>
+                              <div className={Style.bookdiv}>
+                                <Button className={Style.bookbutton}>
+                                  Book
+                                </Button>
+                              </div>
+                            </BookingModal>
+                          </div>
                         </div>
-                      </div>
-                    )
-                )}
-              </>
-            )}
-           
-          </section>
-          <Pagination
+                      )
+                  )}
+                </>
+              )}
+            </section>
+            <Pagination
               pageSize={pageSize}
               current={current}
               total={data.length}
