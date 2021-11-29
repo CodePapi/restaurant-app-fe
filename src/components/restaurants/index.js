@@ -66,7 +66,7 @@ const Restaurants = () => {
   const { data, current, minIndex, maxIndex } = paginationConfig;
   return (
     <div className={Style.containr + " container "}>
-      <h1 className={Style.title}> Showing {data?.length} Restaurants </h1>
+      {getRestaurantState.isLoading?"Loading...":<h1 className={Style.title}> Showing {data?.length} Restaurants </h1>}
       <div className={Style.float}>
         {getRestaurantState.isLoading ? (
           <Spin tip="Loading Restaurants...">
